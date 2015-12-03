@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+        <title>UML Editor</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="tabs">
+                <ul>
+                    <li id="file">
+                        File
+                    </li>
+                </ul>
+                <ul>
+                    <li id="edit">
+                        Edit
+                    </li>
+                    <ul>
+                        <li id="rename">
+                            Rename
+                        </li>
+                        <li id="group">
+                            Group
+                        </li>
+                        <li id="ungroup">
+                            Ungroup
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </header>
+        <section id="main">
+            <div class="buttons">
+                <button id="select"/>
+                <button id="association"/>
+                <button id="generalization"/>
+                <button id="composition"/>
+                <button id="class"/>
+                <button id="use_case"/>
+            </div>
+            <div class="canvas-container">
+                <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+                    <g id="viewport" class="viewport"/>
+                    <g id="line-container" class="lines">
+                        <g id="association-temp" class="line-temp">
+                            <path class="line" stroke="black" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+                            <path class="target" fill="none" stroke="none"/>
+                        </g>
+                        <g id="generalization-temp" class="line-temp">
+                            <path class="line" stroke="black" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+                            <path class="target" d="M 0 0 L 20 0 L 0 20 z" fill="white" stroke="black" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" transform="rotate(-45)"/>
+                        </g>
+                        <g id="composition-temp" class="line-temp">
+                            <path class="line" stroke="black" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+                            <path class="target" d="M 0 0 L 15 5 L 20 20 L 5 15 z" fill="white" stroke="black" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" transform="rotate(-45)"/>
+                        </g>
+                    </g>
+                    <rect id="select-area" width="0" height="0" fill="none" stroke="black" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke-dasharray="10,5" transgorm="translate(0,0)" />
+                </svg>
+            </div>
+            <div class="rename-container">
+                <h3>Type New Name</h3> <br />
+                <input type="text"/> <br />
+                <button id="rename-ok"> OK </button>
+                <button id="rename-cancel"> Cancel </button>
+            </div>
+        </section>
+        <footer>
+            <script src="require.js" data-main="js/main" defer></script>
+        </footer>
+    </body>
+</html>

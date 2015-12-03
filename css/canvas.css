@@ -1,0 +1,25 @@
+.canvas-container {
+    display: inline-block;
+    background: #33C;
+    padding: 10px 10px;
+    height: 600px;
+    width: 800px;
+}
+#canvas {
+    background: #CCC;
+    height: 100%;
+    width: 100%;
+}
+.basic {
+    cursor: move;
+}
+.basic > .connect {
+    display: none;
+}
+.select .connect {
+    display: block;
+}
+.line-temp {
+    display: none;
+    pointer-events: none;
+}
