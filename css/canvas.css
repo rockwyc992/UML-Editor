@@ -11,12 +11,15 @@
     width: 100%;
 }
 .basic {
-    cursor: move;
+    cursor: default;
 }
-.basic > .connect {
+.basic > .connect > rect {
     display: none;
 }
-.select .connect {
+.select .connect > rect {
+    display: block;
+}
+.connect > rect.linked {
     display: block;
 }
 .line-temp {
